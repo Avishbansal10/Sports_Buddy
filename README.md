@@ -19,15 +19,6 @@
 - **Authentication:** Firebase Auth
 - **Hosting:** Firebase Hosting
 
-## 🔧 Project Structure
-Sports_Buddy/
-├── public/ # Static web assets (HTML, CSS, images)
-├── scripts/ # JavaScript logic (auth, events)
-├── functions/ # Cloud functions (optional)
-├── firebase.json # Firebase configuration
-├── firestore.rules # Database security rules
-├── firestore.indexes.json
-
 ## 📝 Roles
 
 - **Admin**
@@ -45,25 +36,26 @@ bash
 git clone https://github.com/your-username/sports-buddy.git
 cd sports-buddy
 
-2. Setup Firebase
+### 2. Setup Firebase
    
-Go to Firebase Console
+-Go to Firebase Console
 
-Create a new project
+-Create a new project
 
-Add web app credentials to firebaseConfig.js
+-Add web app credentials to firebaseConfig.js
 
-Set up Firestore and Authentication
+-Set up Firestore and Authentication
 
-3. Deploy
+### 3. Deploy
 
-firebase login
-firebase init
-firebase deploy
+-firebase login
 
-👤 Author
-Avish Bansal
+-firebase init
 
-Thapar Institute of Engineering & Technology
+-firebase deploy
 
-COE-2025
+### 4. Author 
+
+-Avish Bansal
+
+Thapar Institute of Engineering & Technology.
