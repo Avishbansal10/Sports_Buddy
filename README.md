@@ -34,6 +34,7 @@
 
 bash
 git clone https://github.com/your-username/sports-buddy.git
+
 cd sports-buddy
 
 ### 2. Setup Firebase
