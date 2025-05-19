@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login - Sports Buddy</title>
+</head>
+
+<body>
+    <h1>Admin Login</h1>
+    <form id="loginForm">
+        <input type="email" id="adminEmail" placeholder="Email" required /><br>
+        <input type="password" id="adminPassword" placeholder="Password" required /><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBAh3S7U6h6E1cg5AZS8Yr6CVZuVQBkmUo",
+            authDomain: "sportsbuddy-10.firebaseapp.com",
+            projectId: "sportsbuddy-10",
+            storageBucket: "sportsbuddy-10.appspot.com",
+            messagingSenderId: "623624815959",
+            appId: "1:623624815959:web:29f594d2298acbf3a62a12"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("adminEmail").value;
+            const password = document.getElementById("adminPassword").value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                    alert("Login successful!");
+                    window.location.href = "admin-dashboard.html";
+                })
+                .catch((error) => {
+                    alert("Login failed: " + error.message);
+                });
+        });
+        
+    </script>
+    
+</body>
+
+</html>
